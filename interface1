@@ -1,0 +1,20 @@
+interface solution{
+    public void Hello();
+    public void Welcome(String s);
+}
+class A implements solution{
+    public void Hello(){
+        System.out.println("Hello World");
+    }
+    public void Welcome(String s){
+        System.out.println("Welcome to Indore");
+        System.out.println("\n"+s);
+    }
+    public static void main (String[] args) {
+        A a=new A();
+        a.Hello();
+        a.Welcome("hindi");
+    }
+}
+
+

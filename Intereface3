@@ -1,0 +1,29 @@
+interface Machine{
+    public void start();
+    public void stop();
+}
+class Car implements Machine{
+    public void start(){
+        System.out.println("Start");
+    }
+    public void stop(){
+        System.out.println("Stop");
+    }
+}
+public class Testing{
+    public static void main (String[] args) {
+       Machine machine=new Car();
+        machine.start();
+        machine.stop();
+        
+        paint(new Car());
+    }
+    public static void paint(Machine m){
+        m.stop();
+        System.out.println("Painting....");
+    m.start();
+        
+    }
+}
+
+

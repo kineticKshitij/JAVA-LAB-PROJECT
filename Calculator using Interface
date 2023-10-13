@@ -1,0 +1,27 @@
+interface Calculator{
+    public void Add(Double a,Double b);
+    public void Subtract(Double a,Double b);
+    public void Product(Double a,Double b);
+    public void Question(Double a,Double b);
+}
+class A implements Calculator{
+    public void Add(Double a,Double b){
+        System.out.println(a+b);
+    }
+    public void Subtract(Double a,Double b){
+        System.out.println(a-b);
+    }
+    public void Product(Double a,Double b){
+        System.out.println(a*b);
+    }
+    public void Question(Double a,Double b){
+        System.out.println(a/b);
+    }
+    public static void main (String[] args) {
+        A a=new A();
+        a.Add(4.25,5.56);
+        a.Subtract(10.23,2.75);
+        a.Product(4.45,5.4);
+        a.Question(8004.4,44.4);
+    }
+}

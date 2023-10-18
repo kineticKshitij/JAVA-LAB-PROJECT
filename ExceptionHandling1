@@ -1,0 +1,15 @@
+import java.util.*;
+class  Main{
+    public static void main (String[] args) {
+        try {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter any Integer: ");
+        int n=s.nextInt();
+            int divideByZero=5/n;
+            System.out.println("Rest of code is in try block");
+            
+        } catch(Exception e) {
+            System.out.println("ArithmeticException=> "+e.getMessage());
+        }
+    }
+}

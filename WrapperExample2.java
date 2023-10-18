@@ -32,9 +32,9 @@ public class WrapperExample2
 	   
 		System.out.println(f+" "+f1+" "+f2);
 	
-// 		Byte by = new Byte(2);
-// 		byte by1 = by.valueOf(by);
-// 	    byte by2 = by;
-// 		System.out.println(by+" "+by1+" "+by2);
+ 		Byte by = new Byte(2);
+ 		byte by1 = by.valueOf(by);
+ 	    byte by2 = by;
+		System.out.println(by+" "+by1+" "+by2);
 	}
 }

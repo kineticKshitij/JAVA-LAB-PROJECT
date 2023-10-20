@@ -1,0 +1,17 @@
+public class TestThrowandThrows{
+    public static double divide(double m,double n) throws ArithmeticException
+    {
+            double d=m/n;
+            return d;
+    }
+    public static void main (String[] args) {
+    try {
+        System.out.println(divide(188,0));
+    } catch(ArithmeticException e) {
+         System.out.println("\nNumber cannot be divide by zero.");
+    }
+    System.out.println("Rest of the code");
+   
+    
+    }
+}

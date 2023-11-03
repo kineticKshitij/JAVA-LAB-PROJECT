@@ -1,0 +1,37 @@
+class A extends Thread
+{
+public void function(int n1,int n2,int n3){
+    
+       if(n3%2==0){for(int i=n1;i<=n2;i++){
+     
+            if(i%2==0){
+                System.out.println("\n"+i);
+            }}}
+            else{
+                for(int i=n1;i<=n2;i++){
+     
+            if(i%2!=0){
+                System.out.println("\n"+i);
+            }
+                
+            }
+}}}
+class B extends Thread{
+    A a=new A();
+    public void run(){
+    a.function(1,10,0);
+}}
+class C extends Thread{
+        A a=new A();
+    public void run(){
+    a.function(1,10,1);
+    } }
+    public class Main{
+        public static void main (String[] args) {
+            B b=new B();
+            b.start();
+            C c=new C();
+            c.start();
+        }
+    }
+    

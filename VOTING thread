@@ -1,0 +1,47 @@
+class A {
+    static int BJP=0;
+    static int Cong=0;
+    
+ public static void Vote(String s){
+     if(s=="BJP"){
+         BJP++;
+         
+     }
+     else{
+         Cong++;
+     }}
+    public static void Result(){
+        System.out.println("Bjp total votes: "+BJP);
+        System.out.println("Congress total votes: "+Cong);
+        if(BJP>Cong){
+            System.out.println("Bjp Won with "+(BJP-Cong)   +" votes.");
+        }
+        else{
+            System.out.println("Congress Won with "+(Cong-BJP)+" votes.");
+        }
+     }
+ }
+class B implements Runnable{
+    public void run(){
+        A.Vote("BJP");
+    }
+}
+class C implements Runnable{
+    public void run(){
+        A.Vote("Cong");
+    }
+} 
+public class Main{
+    public static void main (String[] args) {
+        for(int i=1;i<50;i++){
+        Thread t1=new Thread(new B());
+        t1.start();
+    }
+    for(int i=1;i<40;i++){
+        Thread t2=new Thread(new C());
+        t2.start();
+    }
+    A.Result();
+    }
+    
+}

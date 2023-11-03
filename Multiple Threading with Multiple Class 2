@@ -1,0 +1,44 @@
+class A extends Thread{
+    static String ac="lkils00485j";
+     
+    static double amount=1500;
+    public static void Withdraw(double n){
+        if(amount > n){
+            System.out.println(n+" rupees Withdraw.");
+            System.out.println("\nRemaining Amount: "+(amount-n));
+        }
+        else{
+            System.out.println("Insufficient Money Available");
+        }
+    }
+    public static void Deposit(double n){
+        System.out.println("\nTotal Amount: "+amount+n);
+    }
+}
+class B extends Thread{
+   public void  run(){
+    A.Withdraw(1256.22);}
+}
+class C extends Thread{
+  public void  run(){
+        A.Withdraw(2500);
+    }}
+    class D extends Thread{
+        public void run(){
+            A.Deposit(10000);
+        }
+    }
+
+public class Main{
+    public static void main (String[] args) {
+    
+           System.out.println("Account No.: "+A.ac);
+       
+        B b= new B();
+        b.start();
+        C c=new C();
+        c.start();
+        D d=new D();
+        d.start();
+    }
+}

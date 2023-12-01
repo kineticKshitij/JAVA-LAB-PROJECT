@@ -1,19 +1,19 @@
 class Data{
 
         private String name;
-        public void getname(){
-         return   this.name;
+        public void set(String n){
+        name=n;
         }
-        public void setname(String name)
+        public void get()
         {
-            this.name =name;
+           System.out.println(name);
         }
 }
 public class Main{
     public static void main(String[] main)
     {
         Data d=new Data();
-        d.name ="JAVA";
-        System.out.println(d.getname());
+        d.set("Kshitij Marotkar");
+            d.get();
     }
 }

@@ -1,0 +1,24 @@
+//Example of Generic Class
+class Main<K>{
+    public static void main (String[] args) {
+        GenericClass<String> strobj=new GenericClass<>("Kshitij Marotkar");
+       System.out.println("Generic Class returns:\n"+strobj.returnTheData());
+       
+       GenericClass<Integer> intobj=new GenericClass<>(77);
+       System.out.println(intobj.returnTheData());
+       
+       GenericClass<String> str1obj=new GenericClass<>("CSIT");
+       System.out.println(str1obj.returnTheData());
+       
+    }
+}
+class GenericClass<T>{
+    private T data;
+    
+    public GenericClass(T data){
+    this.data=data;
+    }
+    public T returnTheData(){
+        return this.data;
+    }
+}

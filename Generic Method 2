@@ -1,0 +1,14 @@
+//Example of Generic Method
+class Main{
+    public static void main (String[] args) {
+        CallingClass call=new CallingClass();
+        call.<String,Integer>genericMethod("Kshitij",789);
+    }
+}
+class CallingClass{
+    public <T,V> void genericMethod(T data,V data1){
+        System.out.println("Generics Method");
+        System.out.println(data);
+        System.out.println("Data Passed In:"+data1);
+    }
+}
